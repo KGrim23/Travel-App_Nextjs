@@ -56,7 +56,7 @@ const Hero = () => {
   return (
     <section className="flex flex-col pt-8 p-8 max-container padding-container lg:gap-5 lg:pt-8">
       <h1 className="bold-52 text-md lg:text-2xl lg:bold-88 text-center">Aplentify your skills & career growth</h1>
-      <p className="regular-20 text-center text-black pt-8">Get instant help from our friendly <span className="font-extrabold">Appie</span> AI assistant and connect with global mentors, tutors, and coaching experts!
+      <p className="regular-20 text-center text-black pt-8">Get instant helgp from our friendly <span className="font-extrabold">Appie</span> AI assistant and connect with global mentors, tutors, and coaching experts!
       </p>
     
     </section>
