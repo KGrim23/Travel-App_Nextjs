@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const Navbar = () => {
   return (
-    <nav className="flexCenter max-container padding-container relative z-30 py-5">
+    <nav className="flexCenter max-container padding-container relative py-5">
         <Link href="/">
           <Image src="/Aplentify Logo.png" alt="logo" width={200} height={200} />
         </Link>
