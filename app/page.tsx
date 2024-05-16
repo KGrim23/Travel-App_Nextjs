@@ -1,19 +1,19 @@
-// import Camp from "@/components/Camp";
-// import Features from "@/components/Features";
-// import GetApp from "@/components/GetApp";
-// import Guide from "@/components/Guide";
+
 import Example from "@/components/Button";
+import Page1 from "./(UJ5)/register/page1"
+import Register from "./(UJ5)/register/page";
 import Hero from "@/components/Hero";
-// import PrivacyPolicy from "./(legal)/privacy-policy/page";
 
 import Navbar from "@/components/Navbar";
+import Search from "@/components/Search";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
-     
+      {/* <Register /> */}
+      
     </>
   )
 }
