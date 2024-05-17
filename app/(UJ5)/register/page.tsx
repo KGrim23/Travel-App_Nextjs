@@ -56,6 +56,24 @@ const RegisterPage: React.FC = () => {
     // Add more countries as needed
   ];
 
+  const skills = [
+    "Leadership",
+    "Strategy",
+    "AI/ML",
+    "Coaching",
+    // Add more countries as needed
+  ];
+
+  const stacks = [
+    "Figma",
+    "3D Blender",
+    "Notion",
+    "Productboard",
+    "Photoshop",
+    "Adobe AI",
+    // Add more countries as needed
+  ];
+
   const totalSteps = 5; // Total number of steps
 
 
@@ -110,7 +128,7 @@ const RegisterPage: React.FC = () => {
             />
             <label htmlFor="">What country are you located in?</label>
             <select
-              className="block mb-2 p-2 border border-black w-full rounded"
+              className="block mb-2 p-2 border text-gray-500 border-black w-full rounded"
               name="country"
               value={formData.country}
               onChange={handleChange}
@@ -137,12 +155,12 @@ const RegisterPage: React.FC = () => {
 
             <label htmlFor="">Date of Birth</label>
             <input
-              className="block mb-2 p-2 border border-black w-full rounded"
+              className="block mb-2 p-2 border text-gray-500 border-black w-full rounded"
               type="text"
               name="surname"
               value={formData.surname}
               onChange={handleChange}
-              placeholder="Date of Birth"
+              placeholder="DD-MM-YYYY"
               required
             />
 
@@ -152,64 +170,48 @@ const RegisterPage: React.FC = () => {
       case 2:
         return (
           <div className="flex flex-col items-start mx-auto py-6 px-0 space-y-3">
-             <h1 className="flex font-semibold text-2xl">Fantastic! Lets define your expertise.</h1>
+            <h1 className="flex font-semibold text-2xl">Fantastic! Lets define your expertise.</h1>
             <label htmlFor="">Select primary field of expertise *</label>
-            <select
-              className="block mb-2 p-2 border border-black w-full rounded"
+            <select className="block mb-2 p-2 border text-gray-500 border-black w-full rounded"
               name="primaryExpertise"
               value={formData.primaryExpertise}
               onChange={handleChange}
-              required
-            >
-              <option value="">Eg. Design, Language, Math</option>
-              {expertise.map((subj) => (
-                <option key={subj} value={subj}>
-                  {subj}
-                </option>
-              ))}
+              required>
+              {expertise.map((option) => (
+              <option key={option} value={option}>{option}</option>
+                ))}
             </select>
+            
             <label htmlFor="">Another field of expertise *</label>
-            <select
-              className="block mb-2 p-2 border border-black w-full rounded"
+            <select className="block mb-2 p-2  text-gray-500 border border-black w-full rounded"
               name="secondaryExpertise"
               value={formData.secondaryExpertise}
               onChange={handleChange}
-              required
-            >
-              <option value="">Eg. Design, Language, Math</option>
-              {expertise.map((subj) => (
-                <option key={subj} value={subj}>
-                  {subj}
-                </option>
-              ))}
+              required>{expertise.map((option) => (
+              <option key={option} value={option}>{option}</option>
+                ))}
             </select>
 
             <label htmlFor="">Which diciplines are related to your expertise? *</label>
-            <select
-              className="block mb-2 p-2 border border-black w-full rounded"
+            <select className="block mb-2 p-2 border  text-gray-500 border-black w-full rounded"
               name="secondaryExpertise"
               value={formData.secondaryExpertise}
               onChange={handleChange}
-              required
-            >
-              <option value="">Eg. Graphic Design, UI, UX design</option>
-              {expertise.map((subj) => (
-                <option key={subj} value={subj}>
-                  {subj}
-                </option>
-              ))}
+              required>{expertise.map((option) => (
+              <option key={option} value={option}>{option}</option>
+                ))}
             </select>
 
             <label htmlFor="">What skills do you possess? *</label>
             <select
-              className="block mb-2 p-2 border border-black w-full rounded"
+              className="block mb-2 p-2 border  text-gray-500 border-black w-full rounded"
               name="secondaryExpertise"
               value={formData.secondaryExpertise}
               onChange={handleChange}
               required
             >
               <option value="">Leadership, Strategy, AI/ML</option>
-              {expertise.map((subj) => (
+              {skills.map((subj) => (
                 <option key={subj} value={subj}>
                   {subj}
                 </option>
@@ -227,16 +229,16 @@ const RegisterPage: React.FC = () => {
               <h1 className="flex font-semibold text-2xl">Excellent! Let's move on to setting up your stack expertise.</h1>
               <label htmlFor="">What tools are you proficiant in? *</label>
               <select
-                className="block mb-2 p-2 border border-black w-full rounded"
+                className="block mb-2 p-2 border  text-gray-500 border-black w-full rounded"
                 name="primaryExpertise"
                 value={formData.primaryExpertise}
                 onChange={handleChange}
                 required
               >
-                <option value="">Eg. Design, Language, Math</option>
-                {expertise.map((subj) => (
-                  <option key={subj} value={subj}>
-                    {subj}
+                <option value="">Figma, 3D Blender, Adobe Ai</option>
+                {stacks.map((stack) => (
+                  <option key={stack} value={stack}>
+                    {stack}
                   </option>
                 ))}
               </select>
@@ -251,7 +253,7 @@ const RegisterPage: React.FC = () => {
           <div className="flex flex-col items-start mx-auto py-6 px-0 space-y-3">
             <h1 className="flex font-semibold text-2xl">One last detail! How would you like to showcase your summary?</h1>
             <label htmlFor="">Include your professional title, years of experience, key skills, and a brief overview of your career. *</label>
-            <textarea name="text" id="" placeholder='Write here' className="block mb-2 p-2 border border-black w-full h-[200px] rounded"></textarea>
+            <textarea name="text" id="" placeholder='Write here' className=" text-gray-500 block mb-2 p-2 border border-black w-full h-[200px] rounded"></textarea>
             <div className="flex flex-row items-center w-full justify-between py-6 px-0">
             <p className='flex'>Make sure it is clear is nice!</p>
             <p className='flex'>0/500</p>
@@ -267,7 +269,7 @@ const RegisterPage: React.FC = () => {
       return (
         <div className="flex flex-col items-start mx-auto py-6 px-0 space-y-3">
           <h1 className="flex font-semibold text-2xl">Your mentor account has been created!</h1>
-          <p>Now, link your Google calendar to stay organised.</p>
+          <p className='text-bold'>Now, link your Google calendar to stay organised.</p>
           <p>Once connected, your profile will be visible on our Explore page as soon as your mentor application is approved.
               Remember, your account also needs to be verified by filling in the mentor verification form available on your dashboard.
           </p>
