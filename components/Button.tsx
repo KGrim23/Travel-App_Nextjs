@@ -16,6 +16,37 @@ function Example({ type, title, variant }: ButtonProps) {
 }
 
 
+<div>
+<label className="block mb-1">Related Disciplines</label>
+<div>
+  <input
+    type="checkbox"
+    name="relatedDisciplines"
+    value="UX UI Design"
+    checked={formData.relatedDisciplines.includes('UX UI Design')}
+    onChange={handleCheckboxChange}
+    className="mr-2"
+  />
+  <label>UX UI Design</label>
+</div>
+{/* Add more checkboxes as needed */}
+</div>
+<div>
+<label className="block mb-1">Skills</label>
+<div>
+  <input
+    type="checkbox"
+    name="skills"
+    value="Collaboration"
+    checked={formData.skills.includes('Collaboration')}
+    onChange={handleCheckboxChange}
+    className="mr-2"
+  />
+  <label>Collaboration</label>
+</div>
+{/* Add more checkboxes as needed */}
+</div>
+
 // const Button = ({ type, title, icon, variant, full }: ButtonProps) => {
 //   return (
     
