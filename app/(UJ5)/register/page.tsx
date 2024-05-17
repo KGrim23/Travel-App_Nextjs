@@ -55,6 +55,8 @@ const RegisterPage: React.FC = () => {
     // Add more countries as needed
   ];
 
+  const totalSteps = 5; // Total number of steps
+
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -276,6 +278,7 @@ const RegisterPage: React.FC = () => {
   };
     return (
       <div className="p-2 max-w-md mx-auto">
+        <p className="text-gray-500 flex justify-end">{step}/{totalSteps}</p>
         <div className="flex justify-between py-4 px-0 mb-6">
           {/* Step indicators */}
           {[1, 2, 3, 4].map((indicator) => (
@@ -303,27 +306,7 @@ const RegisterPage: React.FC = () => {
         </div>
       </div>
     );
-//   return (
-//     <div className="p-2 max-w-md mx-auto">
-//       {/* <h1 className="text-2xl font-bold mb-4">Fantastic! Now let's define your experties.</h1> */}
-//       {renderStep()}
-//       <div className="mt-4 flex justify-between flex-row mx-auto w-full py-6 px-0">
-//         <button
-//           className="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded"
-//           onClick={handlePrevStep}
-//           disabled={step === 1}
-//         >
-//           Back
-//         </button>
-//         <button
-//           className="bg-black hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded"
-//           onClick={handleNextStep}
-//         >
-//           {step === 5 ? 'Submit' : 'Next'}
-//         </button>
-//       </div>
-//     </div>
-//   );
+
 };
 
 export default RegisterPage;
