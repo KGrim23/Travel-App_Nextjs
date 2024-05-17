@@ -1,36 +1,31 @@
+'use client'
 import Link from "next/link"
 import Image from "next/image"
-// import { NAV_LINKS } from "@/constants"
-// import Button from "./Button"
 
 const Navbar = () => {
+
   return (
-    <nav className="flex flex-row justify-between items-center mx-auto py-4 px-5">
-        <div className="flex flex-row items-center px-0 py-4">
+    <nav className="flex flex-row justify-between items-center mt-8">
+        <div className="flex flex-row items-center px-0 py-4 space-x-2">
           <Link href="/">
             <Image src="/Aplentify Logo.png" alt="logo" width={100} height={100} />
           </Link>
           <h1 className="flex font-semibold text-2xl">Aplentify</h1>
         </div>
-        <div>
-          <p className="text-gray-500 flex">Step 1/5</p>
-        </div>
-    </nav>
-    
+  
+    </nav> 
   )
 }
-
 export default Navbar
 
- {/* <ul className="hidden h-full gap-12 lg:flex">
-          {NAV_LINKS.map((link)=> (
-            <Link href={link.href} key={link.key} className="regular-16 text-grey-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-              {link.label}
-            </Link>
-          ))}
 
-        </ul>
-        <div className="lg:flexCenter hidden">
-          <Button type="button" title="Login" icon="/user.svg" variant="btn_dark_green" />
-        </div>
-        <Image src="menu.svg"  alt="menu" width={32} height={32} className="inline-block cursor-pointer lg:hidden" /> */}
+// const totalSteps = 5
+// <div className="flex justify-between py-4 px-0 mb-6">
+// {/* Step indicators */}
+// {[1, 2, 3, 4].map((indicator) => (
+//   <div
+//     key={indicator}
+//     className={`h-1 w-full ${indicator <= step ? 'bg-black' : 'bg-gray-300'}`}
+//   />
+// ))}
+// </div>

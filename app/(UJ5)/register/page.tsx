@@ -2,6 +2,7 @@
 /////////////////////////////////////////////////////////
 'use client'
 import React, { useState, ChangeEvent } from 'react';
+import Navbar from '../../../components/Navbar';
 
 interface FormData {
   name: string;
@@ -78,7 +79,7 @@ const RegisterPage: React.FC = () => {
       };
     });
   };
-
+  
   const renderStep = () => {
     switch (step) {
 
@@ -259,6 +260,24 @@ const RegisterPage: React.FC = () => {
 
           </div>
         );
+
+
+     ////////// STEP 5 ////////////
+     case 5:
+      return (
+        <div className="flex flex-col items-start mx-auto py-6 px-0 space-y-3">
+          <h1 className="flex font-semibold text-2xl">Your mentor account has been created!</h1>
+          <p>Now, link your Google calendar to stay organised.</p>
+          <p>Once connected, your profile will be visible on our Explore page as soon as your mentor application is approved.
+              Remember, your account also needs to be verified by filling in the mentor verification form available on your dashboard.
+          </p>
+          <p>View all your upcoming sessions in one place. Easily manage your time and avoid double-booking.</p>
+          <p>Changes automatically sync with your calendar, keeping you up-to-date without manual adjustments.</p>
+          <p>Receive instant notifications for any schedule changes or updates, ensuring you’re always informed.</p>
+          <label htmlFor="">Connect Google Calander</label>
+        </div>
+      );
+
       // Add more cases for additional steps
       default:
         return null;
@@ -278,10 +297,13 @@ const RegisterPage: React.FC = () => {
   };
     return (
       <div className="p-2 max-w-md mx-auto">
-        <p className="text-gray-500 flex justify-end">{step}/{totalSteps}</p>
+        <div className="flex flex-row justify-between items-center">
+          <Navbar />
+          <p className="text-gray-500 flex">{step}/{totalSteps}</p>
+        </div>
         <div className="flex justify-between py-4 px-0 mb-6">
           {/* Step indicators */}
-          {[1, 2, 3, 4].map((indicator) => (
+          {[1, 2, 3, 4, 5].map((indicator) => (
             <div
               key={indicator}
               className={`h-1 w-full ${indicator <= step ? 'bg-black' : 'bg-gray-300'}`}
@@ -301,8 +323,9 @@ const RegisterPage: React.FC = () => {
             className="bg-black hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded"
             onClick={handleNextStep}
           >
-            {step === 4 ? 'Submit' : 'Next'}
+            {step === 5 ? 'Complete Setup' : 'Next'} 
           </button>
+          
         </div>
       </div>
     );
