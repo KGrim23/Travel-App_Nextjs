@@ -4,7 +4,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import Navbar from '../../../components/Navbar';
 
-interface FormData {
+type FormData = {
   name: string;
   surname: string;
   country: string;
@@ -12,7 +12,7 @@ interface FormData {
   secondaryExpertise: string;
   relatedDisciplines: string[];
   skills: string[];
-}
+};
 
 const RegisterPage: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -322,10 +322,11 @@ const RegisterPage: React.FC = () => {
           <button
             className="bg-black hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded"
             onClick={handleNextStep}
+            disabled={step > 5}
           >
-            {step === 5 ? 'Complete Setup' : 'Next'} 
+            {step === totalSteps ? 'Complete Setup' : 'Next'} 
           </button>
-          
+
         </div>
       </div>
     );
