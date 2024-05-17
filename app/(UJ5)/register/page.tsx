@@ -8,10 +8,12 @@ type FormData = {
   name: string;
   surname: string;
   country: string;
+  phoneNumber: number;
   primaryExpertise: string;
   secondaryExpertise: string;
   relatedDisciplines: string[];
   skills: string[];
+  dateOfBirth: number;
 };
 
 const RegisterPage: React.FC = () => {
@@ -24,6 +26,8 @@ const RegisterPage: React.FC = () => {
     secondaryExpertise: '',
     relatedDisciplines: [],
     skills: [],
+    dateOfBirth: 0,
+    phoneNumber: 0,
   });
 
   const countries = [
@@ -105,7 +109,7 @@ const RegisterPage: React.FC = () => {
       case 1:
         return (
           <div className="flex flex-col items-start mx-auto py-6 px-0 space-y-3">
-             <h1 className="flex font-semibold text-2xl">Hello! Let's start filling up your details.</h1>
+            <h1 className="flex font-semibold text-2xl">Hello! Let's start filling up your details.</h1>
             <label htmlFor="">What is your Firstname? *</label>
             <input
               className="block mb-2 p-2 border border-black w-full rounded"
@@ -142,23 +146,23 @@ const RegisterPage: React.FC = () => {
               ))}
             </select>
 
-            <label htmlFor="">Your phone number *</label>
+            <label htmlFor="phoneNumber">Your phone number *</label>
             <input
               className="block mb-2 p-2 border border-black w-full rounded"
-              type="text"
-              name="surname"
-              value={formData.surname}
+              type="number"
+              name="phoneNumber"
+              value={formData.phoneNumber}
               onChange={handleChange}
               placeholder="Phone number"
               required
             />
 
-            <label htmlFor="">Date of Birth</label>
+            <label htmlFor="dateOfBirth">Date of Birth</label>
             <input
               className="block mb-2 p-2 border text-gray-500 border-black w-full rounded"
-              type="text"
-              name="surname"
-              value={formData.surname}
+              type="number"
+              name="dateOfBirth"
+              value={formData.dateOfBirth}
               onChange={handleChange}
               placeholder="DD-MM-YYYY"
               required
