@@ -5,19 +5,16 @@ import Image from "next/image"
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-row justify-between items-center container mx-auto px-4 py-8">
-        <div className="flex flex-row items-center">
+    <nav className="flex flex-row justify-between items-center mx-auto py-4 px-5">
+        <div className="flex flex-row items-center px-0 py-4">
           <Link href="/">
             <Image src="/Aplentify Logo.png" alt="logo" width={100} height={100} />
           </Link>
-          <h1 className="font-semibold text-2xl">Aplentify</h1>
+          <h1 className="flex font-semibold text-2xl">Aplentify</h1>
         </div>
         <div>
-          <p className="text-gray-500">Step 1/5</p>
+          <p className="text-gray-500 flex">Step 1/5</p>
         </div>
-       
-
-      
     </nav>
     
   )
