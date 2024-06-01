@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Travel App",
@@ -14,11 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        
-        <main className="relative overflow-hidden">
-          {children}
-        </main>
-        
+        <main className="relative overflow-hidden">{children}</main>
       </body>
     </html>
   );
