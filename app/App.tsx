@@ -17,7 +17,7 @@ export default function App() {
 
   function handleSubmit(e: any) {
     e.preventDefault();
-    setNameText(firstname, lastname);
+    setNameText(firstname);
   }
 
   return (
