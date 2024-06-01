@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <div>
-      <h1 className="">
+      <h1 className="text-lg">
         Hello, {firstname} {lastname}
       </h1>
 
