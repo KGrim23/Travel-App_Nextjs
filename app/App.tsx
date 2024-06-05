@@ -23,7 +23,7 @@ export default function App() {
   return (
     <div>
       <h1 className="text-lg">
-        Hello, {firstname} {lastname}
+        Hello, {firstname} {surname}
       </h1>
 
       <form className="flex flex-col" action="" onSubmit={handleSubmit}>
